@@ -1,0 +1,16 @@
+.row
+    div(class="col-md-5 col-md-offset-4")
+        h1 All Records
+.row
+    div(class="col-md-6 col-md-offset-3")
+        div {{status}}
+        table(class="table")
+            tr 
+                th ID
+                th Newspaper URL
+            tr(ng-repeat="record in records")
+                th 
+                    a(href="/show/{{record.id}}") {{record.id}}
+                th 
+                    a(href="{{record.main_url}}", target="_blank") {{record.main_url}}
+        a(href="/add", class="btn btn-primary") Show Incomplete

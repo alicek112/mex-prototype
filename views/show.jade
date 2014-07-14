@@ -1,0 +1,25 @@
+div {{status}}
+.row
+    div(class="col-md-5 col-md-offset-4")
+        h1 Viewing Terms of Service
+.row
+.row
+    div(class="col-md-1 col-md-offset-1")
+        p 
+            a(href="/show/{{record.id}}", class="btn btn-primary") Previous
+    div(class="col-md-2")
+        p.text-right ID:
+        p.text-right Newspaper URL:
+        p.text-right Terms of Service:
+    div(class="col-md-6")
+        p.text-left {{record.id}}
+        p.text-left {{record.main_url}}
+        p.text-left {{record.tos_clean}}
+    div(class="col-md-1")
+        p 
+            a(href="/show/{{record.id}}", class="btn btn-primary") Next
+.row
+    div(class="col-md-1 col-md-offset-5")
+        a(href="/", class="btn btn-primary") Return
+    
+        
